@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index,follow"><title>Allegro Account Manager — dokumentacja aplikacji</title><style>body{font:17px/1.65 system-ui,sans-serif;max-width:850px;margin:40px auto;padding:0 22px;color:#20252b}h1,h2{line-height:1.25}h1{font-size:2.2rem}h2{margin-top:2.3rem}code{background:#f2f3f5;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}aside{padding:14px 18px;background:#f4f6fa;border-left:4px solid #546a8a}a{color:#1558a6}footer{margin:50px 0;color:#667}</style></head><body>
 <h1>Allegro Account Manager</h1>
-<p><strong>Dokumentacja planowanej aplikacji korzystającej z Allegro REST API</strong> — aktualizacja 18 listopada 2026 r.</p>
+<p><strong>Dokumentacja prywatnej aplikacji korzystającej z Allegro REST API</strong> — aktualizacja 18 listopada 2026 r.</p>
 <aside>Projekt jest prywatnym narzędziem do obsługi własnego konta Allegro. Nie jest udostępniany innym sprzedawcom ani klientom jako usługa. Dokument opisuje planowane możliwości; ich uruchomienie zależy od wdrożenia, testów i przyznanych uprawnień.</aside>
+<h2>Stan wdrożenia — 18 listopada 2026 r.</h2>
+<p>Infrastruktura AWS w regionie Sztokholm została utworzona. Endpoint HTTPS działa i odrzuca wywołania MCP bez poprawnego tokena OAuth. Połączenie z Allegro i testy na rzeczywistych danych oczekują na złożenie i akceptację wniosku o aplikację oraz autoryzację właściciela.</p>
+<p>Adres przekierowania do wpisania w rejestracji aplikacji Allegro (Authorization Code flow): <code>https://luuoafgkxd.execute-api.eu-north-1.amazonaws.com/allegro/callback</code>.</p>
+<p>Serwer korzysta z jawnego katalogu operacji z oficjalnej specyfikacji Allegro. Wywołania zmieniające dane wymagają zatwierdzenia konkretnego żądania w panelu właściciela. Uprawnienia wykluczone poniżej nie są dostępne. Integracja z klientami ChatGPT i Claude wymaga osobnej rejestracji klientów OAuth; otwarta rejestracja klientów jest wyłączona.</p>
 <h2>1. Cel aplikacji</h2>
 <p>Usprawnienie pracy właściciela konta sprzedażowego Allegro: analiza danych oraz wykonywanie zatwierdzonych operacji za pośrednictwem oficjalnego Allegro REST API. Nowa aplikacja będzie odrębna od istniejącej integracji z systemem fakturowym.</p>
 <h2>2. Planowane funkcjonalności</h2>
